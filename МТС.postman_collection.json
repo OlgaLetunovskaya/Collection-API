@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "fc5c20c7-7055-4cef-9de4-a3492917a434",
+		"name": "МТС",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27658438"
+	},
+	"item": [
+		{
+			"name": "Добавление товара",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"console.log(\"Pre-request\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3ZWIiLCJqdGkiOiJhMGE2OTExODViYjgwNDZhMTk3YmViYjhlZWIxNDBjNzVlM2Q5NTlhOTkyNGY3MjBhYmYyNTJlNTQyYzhiNzEzNjViMTA4MjhkZjMyYTdlNiIsImlhdCI6MTY5NzM3MDQ5NS42MDExMTYsIm5iZiI6MTY5NzM3MDQ5NS42MDExMTgsImV4cCI6MTY5NzQwNjQ5NS41ODc2MjUsInN1YiI6IjY3MmE2ZDE1LTg4MWQtNDQ0My05YWQzLTFlYWE3NzI0NGIxYyIsInNjb3BlcyI6W10sImV4dGVybmFsSWQiOiJjYmYxZmUxOS0wMzNlLTQyMTgtODY1OS03ZWFhZDUzNTdlOTMiLCJwaG9uZSI6Ijc5Mjc2ODA5Nzc3Iiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInNvdXJjZSI6IndlYnNzbyIsInN1cm5hbWUiOiI5Mjc2ODA5Nzc3IiwicHJvZmlsZVR5cGUiOiLQnNC-0LHQuNC70YzQvdCw0Y8g0YHQstGP0LfRjCIsImF2YXRhciI6Imh0dHBzOi8vbXRzLXByb2ZpbGUtczMuczNtdHMucnU6NDQzL3Byb2QtYXZhdGFycy9kZWZhdWx0LWF2YXRhcnMvYXZhdGFyLnBuZyJ9.RgFgyxQP7YgM0L1YOMW2npeOBbmHPtg-mNzd95cUQ5OqqBSO4klY48eZ06nlln_oH5_ztyXKJoKCaMBv92Jgcy-oMjEm9Mn2m3w8llx0z7F710tGkl63vI98xHgQ6psg5e3lHuAlWCrOFBBJzx2pDKVBcrninSdvgWfOwgJwKQ66fZNT2lI99l1IHZi3HbbFotX4QHUxjr6TPcu2hUThfxBWRuFqMPgwzl395JFtB2EpJzJVYUYAmg1fK_HSXrPMnoYBOmq0hO434RZGuXP466mCh_iuR27x0H08SAU6vzja_wJOxqwI43rr-ZFbB4aymDRNKfMhy7m6WcYjo7wXFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "shop.mts.ru"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "authorization",
+						"value": "Basic"
+					},
+					{
+						"key": "authorization-jwt",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3ZWIiLCJqdGkiOiJhMGE2OTExODViYjgwNDZhMTk3YmViYjhlZWIxNDBjNzVlM2Q5NTlhOTkyNGY3MjBhYmYyNTJlNTQyYzhiNzEzNjViMTA4MjhkZjMyYTdlNiIsImlhdCI6MTY5NzM3MDQ5NS42MDExMTYsIm5iZiI6MTY5NzM3MDQ5NS42MDExMTgsImV4cCI6MTY5NzQwNjQ5NS41ODc2MjUsInN1YiI6IjY3MmE2ZDE1LTg4MWQtNDQ0My05YWQzLTFlYWE3NzI0NGIxYyIsInNjb3BlcyI6W10sImV4dGVybmFsSWQiOiJjYmYxZmUxOS0wMzNlLTQyMTgtODY1OS03ZWFhZDUzNTdlOTMiLCJwaG9uZSI6Ijc5Mjc2ODA5Nzc3Iiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInNvdXJjZSI6IndlYnNzbyIsInN1cm5hbWUiOiI5Mjc2ODA5Nzc3IiwicHJvZmlsZVR5cGUiOiLQnNC-0LHQuNC70YzQvdCw0Y8g0YHQstGP0LfRjCIsImF2YXRhciI6Imh0dHBzOi8vbXRzLXByb2ZpbGUtczMuczNtdHMucnU6NDQzL3Byb2QtYXZhdGFycy9kZWZhdWx0LWF2YXRhcnMvYXZhdGFyLnBuZyJ9.RgFgyxQP7YgM0L1YOMW2npeOBbmHPtg-mNzd95cUQ5OqqBSO4klY48eZ06nlln_oH5_ztyXKJoKCaMBv92Jgcy-oMjEm9Mn2m3w8llx0z7F710tGkl63vI98xHgQ6psg5e3lHuAlWCrOFBBJzx2pDKVBcrninSdvgWfOwgJwKQ66fZNT2lI99l1IHZi3HbbFotX4QHUxjr6TPcu2hUThfxBWRuFqMPgwzl395JFtB2EpJzJVYUYAmg1fK_HSXrPMnoYBOmq0hO434RZGuXP466mCh_iuR27x0H08SAU6vzja_wJOxqwI43rr-ZFbB4aymDRNKfMhy7m6WcYjo7wXFA"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "NEW_CART_API_FRONT=0:5; i18n_redirected=ru; _gcl_au=1.1.892884900.1697004527; _ym_uid=1697004528956502485; _ym_d=1697004528; MTS_LOCATION_CODE=77000000000000000000000000; api_token=61ab1eaea97c25d45a14a26f380ffe37372e34302e36312e313832302e30303835343630302031363937303034353237; _userGUID=0:lnlcoi2v:lxK2Tx1Uu5EqJm4McaFJoqrPfvz7OOBo; flocktory-uuid=6e6b43b1-8955-4ff3-9514-482c34fdd2b7-1; _first_source=(direct)/(none); dspid=7d03b85c-e96d-475c-90ef-0434386f3c82; reset_cookie=1; _ga=GA1.2.758372895.1697004530; tmr_lvid=c1c9414b451c63d474d2c5077d003884; tmr_lvidTS=1697004529896; _gpVisits={\"isFirstVisitDomain\":true,\"idContainer\":\"100025ED\"}; MTS_SALE_UID=1771258192; _slid=65263c98870d06bdff02ce6d; mts_id=b792049f-377f-4079-bf31-fea2bb554f58; ma_cid=2683948241697004701; ma_id=5764918691697004700449; _slid_server=65263c98870d06bdff02ce6d; MTSCookiesPolicyAccepted=true; adrcid=AIjNHvD0-eJuoMt2UCnfpGw; big_data_digi_experement=20230626_a1_koni; DIGI_CARTID=45949700379; PHPSESSID=e84intk46g7uj8ttgpu5a8ke9t; _gid=GA1.2.1691105904.1697191762; mts_id_last_sync=1697193180; ma_ss_c5944425-ea8d-43be-9e84-12e77a1b4204=7264857901697193184.4.1697193200.2; MTS_ABTEST_s1=120%7CB; MTS_SHOW_POPUP=true; rrpvid=688660759762877; BX_USER_ID=f8dce6b5a5b0529dedf83ee0732b3f42; rcuid=652926d4743d22ba5c3658aa; PARTNERSHIP_PORTAL_SESSION_ID=NDU2NDNjYWEtNWFmZS00OGRjLTg3ZDctM2I5YjVhMzNlMDY5; TS0121a975=012019f3d4f6c22db704ff37880230dc3bbf4b4ba0e13cd25ed2739386a1574de751e9052413fe093a03b84ba055b79e4259105b832aaa51d9730b368c700965df136ae835b4418cdbcc12c9d37322109157e2e655; mcid=29616963441697197804; first_hit_timestamp=1697197804065; amlbcookie=13; digi_uc=W1sidiIsIjcwOTI1NCIsMTY5NzI4NzI0MDk1M10sWyJ2IiwiNzEzOTIyIiwxNjk3Mjg2ODY2Nzc4XSxbInYiLCI3MDg2MTIiLDE2OTcxOTkxNjE0ODVdLFsidiIsIjYxNDI4NiIsMTY5NzE5ODk3ODYxMF0sWyJ2IiwiNzAzNjkyIiwxNjk3MDE4NzY1OTQxXSxbInYiLCI3MDg2MTgiLDE2OTcwMTgyOTA1MTNdXQ==; _ym_isad=1; MTSWebSSO=AQIC5wM2LY4Sfcx_-Gml5OUZJb3MQ0ao8e1Yhip9sn4W4j8.*AAJTSQACMDQAAlNLABQtNjk3MjU4Nzk2NjA0ODY2MjU2MAACUzEAAjEz*; ma_ss_a0b18189-da87-4cad-a2f4-cc89e9cc410e=8621759721697370491.3.1697370491.0; dSesn=22a41a6b-c174-fa12-8d67-d2f388c4e30a; _dvs=0:lnrekhyz:TxAQviIo2uMaJw~bCjKmSzXRUHDqI9J6; mvid=70321991571697004528_1697004528797; _last_source=(direct)/(none); __lfsrc=1; catalog_list_mode=grid; clientInnerWidth=670; qrator_jsid=1697370473.369.ssursoQDAqkAl2hL-k444b9em70qp95nt7qpjd3mcva455uur; tmr_detect=1%7C1697371711404; _gp100025ED={\"utm\":\"77da7a27\",\"hits\":6,\"vc\":1,\"ac\":1,\"a1\":1,\"a6\":1}; Basket_MTS=0; cd10=258; _dc_gtm_UA-26459082-21=1"
+					},
+					{
+						"key": "origin",
+						"value": "https://shop.mts.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://shop.mts.ru/personal/basket"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"YaBrowser\";v=\"23\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.967 YaBrowser/23.9.1.967 Yowser/2.5 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"709254\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseurl}}cart/add",
+					"host": [
+						"{{baseurl}}cart"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение товара",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3ZWIiLCJqdGkiOiJhMGE2OTExODViYjgwNDZhMTk3YmViYjhlZWIxNDBjNzVlM2Q5NTlhOTkyNGY3MjBhYmYyNTJlNTQyYzhiNzEzNjViMTA4MjhkZjMyYTdlNiIsImlhdCI6MTY5NzM3MDQ5NS42MDExMTYsIm5iZiI6MTY5NzM3MDQ5NS42MDExMTgsImV4cCI6MTY5NzQwNjQ5NS41ODc2MjUsInN1YiI6IjY3MmE2ZDE1LTg4MWQtNDQ0My05YWQzLTFlYWE3NzI0NGIxYyIsInNjb3BlcyI6W10sImV4dGVybmFsSWQiOiJjYmYxZmUxOS0wMzNlLTQyMTgtODY1OS03ZWFhZDUzNTdlOTMiLCJwaG9uZSI6Ijc5Mjc2ODA5Nzc3Iiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInNvdXJjZSI6IndlYnNzbyIsInN1cm5hbWUiOiI5Mjc2ODA5Nzc3IiwicHJvZmlsZVR5cGUiOiLQnNC-0LHQuNC70YzQvdCw0Y8g0YHQstGP0LfRjCIsImF2YXRhciI6Imh0dHBzOi8vbXRzLXByb2ZpbGUtczMuczNtdHMucnU6NDQzL3Byb2QtYXZhdGFycy9kZWZhdWx0LWF2YXRhcnMvYXZhdGFyLnBuZyJ9.RgFgyxQP7YgM0L1YOMW2npeOBbmHPtg-mNzd95cUQ5OqqBSO4klY48eZ06nlln_oH5_ztyXKJoKCaMBv92Jgcy-oMjEm9Mn2m3w8llx0z7F710tGkl63vI98xHgQ6psg5e3lHuAlWCrOFBBJzx2pDKVBcrninSdvgWfOwgJwKQ66fZNT2lI99l1IHZi3HbbFotX4QHUxjr6TPcu2hUThfxBWRuFqMPgwzl395JFtB2EpJzJVYUYAmg1fK_HSXrPMnoYBOmq0hO434RZGuXP466mCh_iuR27x0H08SAU6vzja_wJOxqwI43rr-ZFbB4aymDRNKfMhy7m6WcYjo7wXFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authority",
+						"value": "shop.mts.ru"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "authorization",
+						"value": "Basic"
+					},
+					{
+						"key": "authorization-jwt",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3ZWIiLCJqdGkiOiJhMGE2OTExODViYjgwNDZhMTk3YmViYjhlZWIxNDBjNzVlM2Q5NTlhOTkyNGY3MjBhYmYyNTJlNTQyYzhiNzEzNjViMTA4MjhkZjMyYTdlNiIsImlhdCI6MTY5NzM3MDQ5NS42MDExMTYsIm5iZiI6MTY5NzM3MDQ5NS42MDExMTgsImV4cCI6MTY5NzQwNjQ5NS41ODc2MjUsInN1YiI6IjY3MmE2ZDE1LTg4MWQtNDQ0My05YWQzLTFlYWE3NzI0NGIxYyIsInNjb3BlcyI6W10sImV4dGVybmFsSWQiOiJjYmYxZmUxOS0wMzNlLTQyMTgtODY1OS03ZWFhZDUzNTdlOTMiLCJwaG9uZSI6Ijc5Mjc2ODA5Nzc3Iiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInNvdXJjZSI6IndlYnNzbyIsInN1cm5hbWUiOiI5Mjc2ODA5Nzc3IiwicHJvZmlsZVR5cGUiOiLQnNC-0LHQuNC70YzQvdCw0Y8g0YHQstGP0LfRjCIsImF2YXRhciI6Imh0dHBzOi8vbXRzLXByb2ZpbGUtczMuczNtdHMucnU6NDQzL3Byb2QtYXZhdGFycy9kZWZhdWx0LWF2YXRhcnMvYXZhdGFyLnBuZyJ9.RgFgyxQP7YgM0L1YOMW2npeOBbmHPtg-mNzd95cUQ5OqqBSO4klY48eZ06nlln_oH5_ztyXKJoKCaMBv92Jgcy-oMjEm9Mn2m3w8llx0z7F710tGkl63vI98xHgQ6psg5e3lHuAlWCrOFBBJzx2pDKVBcrninSdvgWfOwgJwKQ66fZNT2lI99l1IHZi3HbbFotX4QHUxjr6TPcu2hUThfxBWRuFqMPgwzl395JFtB2EpJzJVYUYAmg1fK_HSXrPMnoYBOmq0hO434RZGuXP466mCh_iuR27x0H08SAU6vzja_wJOxqwI43rr-ZFbB4aymDRNKfMhy7m6WcYjo7wXFA"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "cookie",
+						"value": "NEW_CART_API_FRONT=0:5; i18n_redirected=ru; _gcl_au=1.1.892884900.1697004527; _ym_uid=1697004528956502485; _ym_d=1697004528; MTS_LOCATION_CODE=77000000000000000000000000; api_token=61ab1eaea97c25d45a14a26f380ffe37372e34302e36312e313832302e30303835343630302031363937303034353237; _userGUID=0:lnlcoi2v:lxK2Tx1Uu5EqJm4McaFJoqrPfvz7OOBo; flocktory-uuid=6e6b43b1-8955-4ff3-9514-482c34fdd2b7-1; _first_source=(direct)/(none); dspid=7d03b85c-e96d-475c-90ef-0434386f3c82; reset_cookie=1; _ga=GA1.2.758372895.1697004530; tmr_lvid=c1c9414b451c63d474d2c5077d003884; tmr_lvidTS=1697004529896; _gpVisits={\"isFirstVisitDomain\":true,\"idContainer\":\"100025ED\"}; MTS_SALE_UID=1771258192; _slid=65263c98870d06bdff02ce6d; mts_id=b792049f-377f-4079-bf31-fea2bb554f58; ma_cid=2683948241697004701; ma_id=5764918691697004700449; _slid_server=65263c98870d06bdff02ce6d; MTSCookiesPolicyAccepted=true; adrcid=AIjNHvD0-eJuoMt2UCnfpGw; big_data_digi_experement=20230626_a1_koni; DIGI_CARTID=45949700379; PHPSESSID=e84intk46g7uj8ttgpu5a8ke9t; _gid=GA1.2.1691105904.1697191762; mts_id_last_sync=1697193180; ma_ss_c5944425-ea8d-43be-9e84-12e77a1b4204=7264857901697193184.4.1697193200.2; MTS_ABTEST_s1=120%7CB; MTS_SHOW_POPUP=true; rrpvid=688660759762877; BX_USER_ID=f8dce6b5a5b0529dedf83ee0732b3f42; rcuid=652926d4743d22ba5c3658aa; PARTNERSHIP_PORTAL_SESSION_ID=NDU2NDNjYWEtNWFmZS00OGRjLTg3ZDctM2I5YjVhMzNlMDY5; TS0121a975=012019f3d4f6c22db704ff37880230dc3bbf4b4ba0e13cd25ed2739386a1574de751e9052413fe093a03b84ba055b79e4259105b832aaa51d9730b368c700965df136ae835b4418cdbcc12c9d37322109157e2e655; mcid=29616963441697197804; first_hit_timestamp=1697197804065; amlbcookie=13; digi_uc=W1sidiIsIjcwOTI1NCIsMTY5NzI4NzI0MDk1M10sWyJ2IiwiNzEzOTIyIiwxNjk3Mjg2ODY2Nzc4XSxbInYiLCI3MDg2MTIiLDE2OTcxOTkxNjE0ODVdLFsidiIsIjYxNDI4NiIsMTY5NzE5ODk3ODYxMF0sWyJ2IiwiNzAzNjkyIiwxNjk3MDE4NzY1OTQxXSxbInYiLCI3MDg2MTgiLDE2OTcwMTgyOTA1MTNdXQ==; _ym_isad=1; MTSWebSSO=AQIC5wM2LY4Sfcx_-Gml5OUZJb3MQ0ao8e1Yhip9sn4W4j8.*AAJTSQACMDQAAlNLABQtNjk3MjU4Nzk2NjA0ODY2MjU2MAACUzEAAjEz*; ma_ss_a0b18189-da87-4cad-a2f4-cc89e9cc410e=8621759721697370491.3.1697370491.0; dSesn=22a41a6b-c174-fa12-8d67-d2f388c4e30a; _dvs=0:lnrekhyz:TxAQviIo2uMaJw~bCjKmSzXRUHDqI9J6; mvid=70321991571697004528_1697004528797; _last_source=(direct)/(none); __lfsrc=1; catalog_list_mode=grid; clientInnerWidth=670; qrator_jsid=1697370473.369.ssursoQDAqkAl2hL-k444b9em70qp95nt7qpjd3mcva455uur; mts_auth=Y; Basket_MTS=0; _dc_gtm_UA-26459082-21=1; personalCart=%7B%22items%22%3A%7B%22709254%22%3A1%7D%2C%22price%22%3A139990%2C%22date%22%3A1697371588%7D; personalCart=%7B%22items%22%3A%7B%22709254%22%3A1%7D%2C%22price%22%3A139990%2C%22date%22%3A1697371588%7D; tmr_detect=1%7C1697371711404; _gp100025ED={\"utm\":\"77da7a27\",\"hits\":6,\"vc\":1,\"ac\":1,\"a1\":1,\"a6\":1}; cd10=255"
+					},
+					{
+						"key": "origin",
+						"value": "https://shop.mts.ru"
+					},
+					{
+						"key": "referer",
+						"value": "https://shop.mts.ru/personal/basket"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"YaBrowser\";v=\"23\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.967 YaBrowser/23.9.1.967 Yowser/2.5 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"products\":[\r\n        {\r\n            \"quantity\":2,\r\n            \"id\":709254\r\n        }\r\n        ],\r\n    \"corporate\":false };"
+				},
+				"url": {
+					"raw": "https://shop.mts.ru/api/v1/baskets/current/items",
+					"protocol": "https",
+					"host": [
+						"shop",
+						"mts",
+						"ru"
+					],
+					"path": [
+						"api",
+						"v1",
+						"baskets",
+						"current",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление товара",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3ZWIiLCJqdGkiOiJhMGE2OTExODViYjgwNDZhMTk3YmViYjhlZWIxNDBjNzVlM2Q5NTlhOTkyNGY3MjBhYmYyNTJlNTQyYzhiNzEzNjViMTA4MjhkZjMyYTdlNiIsImlhdCI6MTY5NzM3MDQ5NS42MDExMTYsIm5iZiI6MTY5NzM3MDQ5NS42MDExMTgsImV4cCI6MTY5NzQwNjQ5NS41ODc2MjUsInN1YiI6IjY3MmE2ZDE1LTg4MWQtNDQ0My05YWQzLTFlYWE3NzI0NGIxYyIsInNjb3BlcyI6W10sImV4dGVybmFsSWQiOiJjYmYxZmUxOS0wMzNlLTQyMTgtODY1OS03ZWFhZDUzNTdlOTMiLCJwaG9uZSI6Ijc5Mjc2ODA5Nzc3Iiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInNvdXJjZSI6IndlYnNzbyIsInN1cm5hbWUiOiI5Mjc2ODA5Nzc3IiwicHJvZmlsZVR5cGUiOiLQnNC-0LHQuNC70YzQvdCw0Y8g0YHQstGP0LfRjCIsImF2YXRhciI6Imh0dHBzOi8vbXRzLXByb2ZpbGUtczMuczNtdHMucnU6NDQzL3Byb2QtYXZhdGFycy9kZWZhdWx0LWF2YXRhcnMvYXZhdGFyLnBuZyJ9.RgFgyxQP7YgM0L1YOMW2npeOBbmHPtg-mNzd95cUQ5OqqBSO4klY48eZ06nlln_oH5_ztyXKJoKCaMBv92Jgcy-oMjEm9Mn2m3w8llx0z7F710tGkl63vI98xHgQ6psg5e3lHuAlWCrOFBBJzx2pDKVBcrninSdvgWfOwgJwKQ66fZNT2lI99l1IHZi3HbbFotX4QHUxjr6TPcu2hUThfxBWRuFqMPgwzl395JFtB2EpJzJVYUYAmg1fK_HSXrPMnoYBOmq0hO434RZGuXP466mCh_iuR27x0H08SAU6vzja_wJOxqwI43rr-ZFbB4aymDRNKfMhy7m6WcYjo7wXFA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}baskets/current/items/334826584?corporate=false",
+					"host": [
+						"{{baseurl}}baskets"
+					],
+					"path": [
+						"current",
+						"items",
+						"334826584"
+					],
+					"query": [
+						{
+							"key": "corporate",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3ZWIiLCJqdGkiOiJhMGE2OTExODViYjgwNDZhMTk3YmViYjhlZWIxNDBjNzVlM2Q5NTlhOTkyNGY3MjBhYmYyNTJlNTQyYzhiNzEzNjViMTA4MjhkZjMyYTdlNiIsImlhdCI6MTY5NzM3MDQ5NS42MDExMTYsIm5iZiI6MTY5NzM3MDQ5NS42MDExMTgsImV4cCI6MTY5NzQwNjQ5NS41ODc2MjUsInN1YiI6IjY3MmE2ZDE1LTg4MWQtNDQ0My05YWQzLTFlYWE3NzI0NGIxYyIsInNjb3BlcyI6W10sImV4dGVybmFsSWQiOiJjYmYxZmUxOS0wMzNlLTQyMTgtODY1OS03ZWFhZDUzNTdlOTMiLCJwaG9uZSI6Ijc5Mjc2ODA5Nzc3Iiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInNvdXJjZSI6IndlYnNzbyIsInN1cm5hbWUiOiI5Mjc2ODA5Nzc3IiwicHJvZmlsZVR5cGUiOiLQnNC-0LHQuNC70YzQvdCw0Y8g0YHQstGP0LfRjCIsImF2YXRhciI6Imh0dHBzOi8vbXRzLXByb2ZpbGUtczMuczNtdHMucnU6NDQzL3Byb2QtYXZhdGFycy9kZWZhdWx0LWF2YXRhcnMvYXZhdGFyLnBuZyJ9.RgFgyxQP7YgM0L1YOMW2npeOBbmHPtg-mNzd95cUQ5OqqBSO4klY48eZ06nlln_oH5_ztyXKJoKCaMBv92Jgcy-oMjEm9Mn2m3w8llx0z7F710tGkl63vI98xHgQ6psg5e3lHuAlWCrOFBBJzx2pDKVBcrninSdvgWfOwgJwKQ66fZNT2lI99l1IHZi3HbbFotX4QHUxjr6TPcu2hUThfxBWRuFqMPgwzl395JFtB2EpJzJVYUYAmg1fK_HSXrPMnoYBOmq0hO434RZGuXP466mCh_iuR27x0H08SAU6vzja_wJOxqwI43rr-ZFbB4aymDRNKfMhy7m6WcYjo7wXFA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "https://shop.mts.ru/api/v1/",
+			"type": "string"
+		}
+	]
+}

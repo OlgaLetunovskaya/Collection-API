@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "db884ce2-824e-4f82-b5cb-2a8a911e5f40",
+		"name": "kinopoisk.dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27658438"
+	},
+	"item": [
+		{
+			"name": "Мультфильмы (cartoon) за 2020–2023 годы с рейтингом на «Кинопоиске» выше 8.5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}v1.3/movie?year=2020-2023&type=cartoon&rating.kp=8.5 - 10",
+					"host": [
+						"{{baseURL}}v1",
+						"3"
+					],
+					"path": [
+						"movie"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2020-2023"
+						},
+						{
+							"key": "type",
+							"value": "cartoon"
+						},
+						{
+							"key": "rating.kp",
+							"value": "8.5 - 10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Информацию по любому американскому сериалу",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}v1/movie?description=&type=tv-series&limit=1&countries.name=США",
+					"host": [
+						"{{baseURL}}v1"
+					],
+					"path": [
+						"movie"
+					],
+					"query": [
+						{
+							"key": "description",
+							"value": ""
+						},
+						{
+							"key": "type",
+							"value": "tv-series"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "countries.name",
+							"value": "США"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Поиск по режиссеру Квентин Тарантино",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}v1.3/movie?director=Квентин Тарантино",
+					"host": [
+						"{{baseURL}}v1",
+						"3"
+					],
+					"path": [
+						"movie"
+					],
+					"query": [
+						{
+							"key": "director",
+							"value": "Квентин Тарантино"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Позитивные отзывы по любому российскому фильму",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}v1/review?sortField=votes.kp&type=Позитивный&movieId=41520",
+					"host": [
+						"{{baseURL}}v1"
+					],
+					"path": [
+						"review"
+					],
+					"query": [
+						{
+							"key": "sortField",
+							"value": "votes.kp"
+						},
+						{
+							"key": "type",
+							"value": "Позитивный"
+						},
+						{
+							"key": "movieId",
+							"value": "41520"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "DC3N04W-9BAMEPS-NRNSJJP-GD5HB8M",
+			"type": "string"
+		},
+		{
+			"key": "baseURL",
+			"value": "https://api.kinopoisk.dev/v1/",
+			"type": "string"
+		}
+	]
+}
